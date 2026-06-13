@@ -434,7 +434,7 @@
       position: relative; overflow: hidden;
     }
     .receipt-header::before {
-      content: '☪';
+      content: '';
       position: absolute; left: -10px; top: -10px;
       font-size: 9rem; color: rgba(255,255,255,0.04);
       pointer-events: none;
@@ -1367,7 +1367,7 @@
       line-height: 1.7;
     }
     .att-lock-banner::before {
-      content: '🔒';
+      content: '';
       font-size: 1.4rem;
       flex-shrink: 0;
       margin-top: 2px;
@@ -2135,7 +2135,7 @@
       line-height: 2;
     }
     .empty-dashboard-state::before {
-      content: '📭';
+      content: '';
       display: block;
       font-size: 2rem;
       margin-bottom: 8px;
@@ -2219,7 +2219,6 @@
 <div class="wrap">
   <div class="card">
     <div style="text-align:center; padding: 10px 0 18px; border-bottom: 1px solid var(--border); margin-bottom: 18px;">
-      <div style="font-size:2.4rem; margin-bottom:4px;">🕌</div>
       <h1 style="margin:0 0 4px; font-size:1.65rem;">حفظ منیجر</h1>
       <div style="color:var(--muted); font-size:0.9rem; font-weight:500;">تعلیمی و حاضری ریکارڈ سسٹم</div>
     </div>
@@ -2243,11 +2242,11 @@
         <div class="dashboard-hero">
             <div class="dashboard-hero-top">
                 <div>
-                    <h2>📊 ادارہ جاتی ڈیش بورڈ</h2>
+                    <h2>ادارہ جاتی ڈیش بورڈ</h2>
                     <p>مدرسہ یا ادارے کے تمام اہم اعدادوشمار، طلباء کی صورتحال، اور مجموعی پیش رفت ایک ہی نظر میں۔</p>
                 </div>
                 <div class="dashboard-badge">
-                  <span class="badge-label">📅 آج کی تاریخ</span>
+                  <span class="badge-label">آج کی تاریخ</span>
                   <span class="badge-date" id="dashboardDate">لوڈ ہو رہا ہے...</span>
                 </div>
             </div>
@@ -2259,26 +2258,26 @@
 
         <div class="dashboard-grid-secondary">
             <div class="dashboard-panel">
-                <h3>📈 تفصیلی اعدادوشمار</h3>
+                <h3>تفصیلی اعدادوشمار</h3>
                 <div class="stats-row" id="detailedStats">
                     <!-- Additional stats will be populated here -->
                 </div>
             </div>
 
             <div class="dashboard-panel">
-                <h3>✨ فوری جھلکیاں</h3>
+                <h3>فوری جھلکیاں</h3>
                 <div class="mini-stat-grid" id="dashboardHighlights"></div>
             </div>
         </div>
 
         <div class="dashboard-grid-secondary">
             <div class="dashboard-panel">
-                <h3>🏫 کلاس وار تقسیم</h3>
+                <h3>کلاس وار تقسیم</h3>
                 <div id="dashboardClassOverview"></div>
             </div>
 
             <div class="dashboard-panel">
-                <h3>🆕 حالیہ داخلے</h3>
+                <h3>حالیہ داخلے</h3>
                 <div id="dashboardRecentAdmissions"></div>
             </div>
         </div>
@@ -2298,22 +2297,22 @@
 
         <div class="adm-type-grid">
           <button class="adm-type-btn" onclick="pickAdmType('new', this)">
-            <span class="btn-icon">📝</span>نیا داخلہ
+            نیا داخلہ
           </button>
           <button class="adm-type-btn" onclick="pickAdmType('search', this)">
-            <span class="btn-icon">🔍</span>طالب علم تلاش
+            طالب علم تلاش
           </button>
           <button class="adm-type-btn" onclick="pickAdmType('all', this)">
-            <span class="btn-icon">👥</span>تمام طلباء
+            تمام طلباء
           </button>
           <button class="adm-type-btn" onclick="pickAdmType('classes', this)">
-            <span class="btn-icon">🏫</span>تمام کلاسز
+            تمام کلاسز
           </button>
           <button class="adm-type-btn" onclick="pickAdmType('withdraw', this)">
-            <span class="btn-icon">🚪</span>اخراج / روانگی
+            اخراج / روانگی
           </button>
           <button class="adm-type-btn" onclick="pickAdmType('withdrawn_list', this)">
-            <span class="btn-icon">📋</span>خارج شدہ طلباء
+            خارج شدہ طلباء
           </button>
         </div>
 
@@ -2344,7 +2343,7 @@
           <div class="wizard-panel active" id="wpanel-1">
             <div class="form-section-card slide-down">
               <div class="form-section-header">
-                <div class="form-section-icon icon-blue">📋</div>
+                <div class="form-section-icon icon-blue"></div>
                 <div>
                   <div class="form-section-title">مرحلہ 1 — طالب علم کی معلومات</div>
                   <div class="form-section-subtitle">رجسٹریشن، کلاس اور ذاتی تفصیلات</div>
@@ -2367,9 +2366,9 @@
                   <label>صنف</label>
                   <div class="gender-toggle-wrap">
                     <input type="radio" name="admGenderRadio" id="genderBoy" value="لڑکا" onchange="document.getElementById('admGender').value=this.value" checked>
-                    <label for="genderBoy" class="gender-opt boy-opt">👦 لڑکا</label>
+                    <label for="genderBoy" class="gender-opt boy-opt">لڑکا</label>
                     <input type="radio" name="admGenderRadio" id="genderGirl" value="لڑکی" onchange="document.getElementById('admGender').value=this.value">
-                    <label for="genderGirl" class="gender-opt girl-opt">👧 لڑکی</label>
+                    <label for="genderGirl" class="gender-opt girl-opt">لڑکی</label>
                   </div>
                   <select id="admGender" style="display:none;">
                     <option value="لڑکا">لڑکا</option>
@@ -2394,7 +2393,7 @@
               </div>
               <div class="wizard-sub-section">
                 <div class="form-section-header" style="margin-bottom:12px;">
-                  <div class="form-section-icon icon-amber">📞</div>
+                  <div class="form-section-icon icon-amber"></div>
                   <div><div class="form-section-title" style="font-size:1rem;">رابطہ نمبرز</div></div>
                 </div>
                 <div id="phoneNumbersArea">
@@ -2420,7 +2419,7 @@
           <div class="wizard-panel" id="wpanel-2" style="display:none;">
             <div class="form-section-card slide-down">
               <div class="form-section-header">
-                <div class="form-section-icon icon-green">👨</div>
+                <div class="form-section-icon icon-green"></div>
                 <div>
                   <div class="form-section-title">مرحلہ 2 — والد کی معلومات</div>
                   <div class="form-section-subtitle">Father's Information</div>
@@ -2446,9 +2445,9 @@
                 <label style="color:var(--accent); font-weight:700; display:block; margin-bottom:8px;">کیا والد ہی سرپرست ہیں؟</label>
                 <div class="radio-toggle-group">
                   <input type="radio" name="isFatherGuardian" id="guardianYes" value="yes" onchange="toggleGuardianSection()" checked>
-                  <label for="guardianYes">✅ ہاں</label>
+                  <label for="guardianYes">ہاں</label>
                   <input type="radio" name="isFatherGuardian" id="guardianNo" value="no" onchange="toggleGuardianSection()">
-                  <label for="guardianNo">❌ نہیں</label>
+                  <label for="guardianNo">نہیں</label>
                 </div>
               </div>
             </div>
@@ -2462,7 +2461,7 @@
           <div class="wizard-panel" id="wpanel-3" style="display:none;">
             <div class="form-section-card slide-down">
               <div class="form-section-header">
-                <div class="form-section-icon icon-pink">👩</div>
+                <div class="form-section-icon icon-pink"></div>
                 <div>
                   <div class="form-section-title">مرحلہ 3 — والدہ کی معلومات</div>
                   <div class="form-section-subtitle">Mother's Information</div>
@@ -2489,7 +2488,7 @@
             <div id="guardianSectionContainer" style="display:none;">
               <div class="form-section-card">
                 <div class="form-section-header">
-                  <div class="form-section-icon icon-purple">🛡️</div>
+                  <div class="form-section-icon icon-purple"></div>
                   <div>
                     <div class="form-section-title">سرپرست کی معلومات</div>
                     <div class="form-section-subtitle">والد کی عدم موجودگی میں</div>
@@ -2524,7 +2523,7 @@
           <div class="wizard-panel" id="wpanel-4" style="display:none;">
             <div class="form-section-card slide-down">
               <div class="form-section-header">
-                <div class="form-section-icon icon-green">✅</div>
+                <div class="form-section-icon icon-green"></div>
                 <div>
                   <div class="form-section-title">مرحلہ 4 — جائزہ و تکمیل</div>
                   <div class="form-section-subtitle">تمام معلومات کا آخری جائزہ</div>
@@ -2536,7 +2535,7 @@
             </div>
             <div class="wizard-nav">
               <button class="wizard-btn-back" onclick="wizardBack(4)">→ واپس: والدہ</button>
-              <button class="save-admission-btn" onclick="saveAdmission()">✅ داخلہ محفوظ کریں</button>
+              <button class="save-admission-btn" onclick="saveAdmission()">داخلہ محفوظ کریں</button>
             </div>
           </div>
 
@@ -2566,7 +2565,7 @@
 
           <!-- وارننگ بینر -->
           <div class="withdrawal-warning-banner">
-            <div class="withdrawal-warning-icon">⚠️</div>
+            <div class="withdrawal-warning-icon"></div>
             <div class="withdrawal-warning-text">
               <strong>اخراج / روانگی — احتیاط کریں</strong>
               <p>یہ عمل طالب علم کو فعال فہرست سے ہٹا دے گا۔ اخراج سے پہلے تمام معلومات درست یقینی بنائیں۔</p>
@@ -2575,7 +2574,7 @@
 
           <div class="form-section-card">
             <div class="form-section-header">
-              <div class="form-section-icon icon-amber">🔍</div>
+              <div class="form-section-icon icon-amber"></div>
               <div>
                 <div class="form-section-title">طالب علم تلاش کریں</div>
                 <div class="form-section-subtitle">رجسٹریشن نمبر سے تلاش</div>
@@ -2590,7 +2589,7 @@
           <div id="withdrawDetailsArea" style="display: none;">
             <div class="form-section-card">
               <div class="form-section-header">
-                <div class="form-section-icon icon-blue">👤</div>
+                <div class="form-section-icon icon-blue"></div>
                 <div>
                   <div class="form-section-title">طالب علم کی تفصیلات</div>
                   <div class="form-section-subtitle">Student Details</div>
@@ -2605,7 +2604,6 @@
 
             <div class="withdrawal-form-area">
               <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
-                <span style="font-size:1.3rem;">📝</span>
                 <strong style="color:var(--danger); font-size:1.05rem;">تفصیلاتِ اخراج</strong>
               </div>
               <div class="grid-row">
@@ -2616,7 +2614,7 @@
                   <textarea id="withdrawReasonInput" rows="4" placeholder="اخراج کی مکمل تفصیل یا وجہ یہاں درج کریں..."></textarea>
               </div>
               <div class="btn-container" style="margin-top:20px;">
-                  <button onclick="processWithdrawal()" style="background:linear-gradient(135deg,#b71c1c,var(--danger)); padding:13px 40px; border-radius:10px; letter-spacing:0.3px;">🚪 اخراج محفوظ کریں</button>
+                  <button onclick="processWithdrawal()" style="background:linear-gradient(135deg,#b71c1c,var(--danger)); padding:13px 40px; border-radius:10px; letter-spacing:0.3px;">اخراج محفوظ کریں</button>
               </div>
             </div>
           </div>
@@ -2714,7 +2712,7 @@
           <!-- کنٹرول بار -->
           <div class="me-control-card">
             <div class="form-section-header" style="margin-bottom:18px;">
-              <div class="form-section-icon icon-amber">📋</div>
+              <div class="form-section-icon icon-amber"></div>
               <div>
                 <div class="form-section-title">ماہانہ جائزہ نمبرات اندراج</div>
                 <div class="form-section-subtitle">کلاس اور مہینہ منتخب کر کے نمبرات درج کریں</div>
@@ -2754,7 +2752,7 @@
                 </select>
               </div>
               <button class="me-load-btn" onclick="meLoadStudents()">
-                📋 طلباء لوڈ کریں
+                طلباء لوڈ کریں
               </button>
             </div>
           </div>
@@ -2766,7 +2764,7 @@
           <div class="me-history-section">
             <div class="form-section-card">
               <div class="form-section-header">
-                <div class="form-section-icon icon-green">📊</div>
+                <div class="form-section-icon icon-green"></div>
                 <div>
                   <div class="form-section-title">ماہانہ جائزہ — سابقہ ریکارڈ</div>
                   <div class="form-section-subtitle">Monthly Exam History</div>
@@ -2791,7 +2789,7 @@
                   <option value="فروری">فروری</option>
                   <option value="مارچ">مارچ</option>
                 </select>
-                <button onclick="meRenderHistory()" style="padding:9px 18px; font-size:0.88rem; border-radius:8px;">🔄 تازہ کریں</button>
+                <button onclick="meRenderHistory()" style="padding:9px 18px; font-size:0.88rem; border-radius:8px;">تازہ کریں</button>
               </div>
               <div id="meHistoryArea">
                 <div class="empty-dashboard-state">ابھی تک کوئی ریکارڈ موجود نہیں۔</div>
@@ -2805,7 +2803,7 @@
     
     <div id="tab-records" class="tab-content" style="display:none;">
         
-        <h2>🔍 اکیڈمک ریکارڈ تلاش کریں</h2>
+        <h2>اکیڈمک ریکارڈ تلاش کریں</h2>
         <div class="search-container">
             <input type="text" id="studentSearch" oninput="filterRecords()" placeholder="بچے کا نام لکھ کر تلاش کریں...">
             <button onclick="document.getElementById('studentSearch').value=''; filterRecords();">واضح کریں</button>
@@ -2821,7 +2819,7 @@
       <!-- ===== نیا استاد شامل کریں — Collapsible ===== -->
       <div class="staff-add-trigger">
         <button class="staff-add-open-btn" onclick="toggleStaffForm()">
-          <span id="staffFormToggleIcon">➕</span>
+          <span id="staffFormToggleIcon"></span>
           <span id="staffFormToggleText">نیا استاد شامل کریں</span>
         </button>
       </div>
@@ -2829,7 +2827,7 @@
       <div id="staffFormCollapse" class="staff-collapse-panel" style="display:none;">
         <div class="staff-collapse-inner">
           <div class="form-section-header" style="margin-bottom:20px;">
-            <div class="form-section-icon icon-blue">👨‍🏫</div>
+            <div class="form-section-icon icon-blue"></div>
             <div>
               <div class="form-section-title">اسٹاف پروفائل فارم</div>
               <div class="form-section-subtitle">تمام ضروری معلومات درج کریں</div>
@@ -2876,9 +2874,9 @@
           </div>
 
           <div class="staff-form-btns">
-            <button onclick="saveStaffProfile()" class="staff-save-btn">✅ پروفائل محفوظ کریں</button>
-            <button onclick="clearStaffForm()" class="staff-reset-btn">🔄 فارم صاف کریں</button>
-            <button onclick="toggleStaffForm()" class="staff-cancel-btn">✕ بند کریں</button>
+            <button onclick="saveStaffProfile()" class="staff-save-btn">پروفائل محفوظ کریں</button>
+            <button onclick="clearStaffForm()" class="staff-reset-btn">فارم صاف کریں</button>
+            <button onclick="toggleStaffForm()" class="staff-cancel-btn">بند کریں</button>
           </div>
         </div>
       </div>
@@ -2886,9 +2884,9 @@
       <!-- ===== اساتذہ کی فہرست ===== -->
       <div class="staff-list-wrap">
         <div class="staff-list-header">
-          <h3 style="margin:0; color:var(--accent);">📋 تمام اساتذہ کی فہرست</h3>
+          <h3 style="margin:0; color:var(--accent);">تمام اساتذہ کی فہرست</h3>
           <input type="text" id="staffSearch" class="staff-search-input"
-            placeholder="🔍 نام یا کلاس سے تلاش..." oninput="renderStaffList()">
+            placeholder="نام یا کلاس سے تلاش..." oninput="renderStaffList()">
         </div>
         <div id="staffListArea"></div>
       </div>
@@ -2972,21 +2970,21 @@
       </select>
       <div class="fee-toggle-wrap">
         <button class="fee-toggle-btn active" onclick="pickFeeView('record', this)">
-          <span>💳</span> نئی ادائیگی درج کریں
+          نئی ادائیگی درج کریں
         </button>
         <button class="fee-toggle-btn" onclick="pickFeeView('analytics', this)">
-          <span>📊</span> تمام ادائیگیاں / رپورٹ
+          تمام ادائیگیاں / رپورٹ
         </button>
       </div>
 
       <!-- ===== ادائیگی فارم ===== -->
       <div id="feeRecordPaymentContainer">
-        <h2>💳 نئی فیس کی ادائیگی</h2>
+        <h2>نئی فیس کی ادائیگی</h2>
 
         <!-- تلاش -->
         <div class="fee-search-card">
           <div class="form-section-header" style="margin-bottom:14px;">
-            <div class="form-section-icon icon-blue">🔍</div>
+            <div class="form-section-icon icon-blue"></div>
             <div>
               <div class="form-section-title">طالب علم تلاش کریں</div>
               <div class="form-section-subtitle">رجسٹریشن نمبر درج کریں</div>
@@ -3003,7 +3001,7 @@
 
           <!-- طالب علم بیج -->
           <div class="fee-student-badge">
-            <div class="fee-student-avatar">👦</div>
+            <div class="fee-student-avatar"></div>
             <div>
               <div class="fee-student-name" id="feeDispName">—</div>
               <div class="fee-student-father">والد: <span id="feeDispFather">—</span></div>
@@ -3016,7 +3014,7 @@
           <!-- ادائیگی فارم کارڈ -->
           <div class="fee-payment-card">
             <div class="form-section-header" style="margin-bottom:20px;">
-              <div class="form-section-icon icon-amber">💰</div>
+              <div class="form-section-icon icon-amber"></div>
               <div>
                 <div class="form-section-title">ادائیگی کی تفصیلات</div>
                 <div class="form-section-subtitle">Payment Details</div>
@@ -3031,9 +3029,9 @@
               <div>
                 <label>طریقہ ادائیگی</label>
                 <select id="feeMethodSelect">
-                  <option value="Cash">💵 نقد</option>
-                  <option value="Bank Transfer">🏦 بینک ٹرانسفر</option>
-                  <option value="Online">📱 آن لائن</option>
+                  <option value="Cash">نقد</option>
+                  <option value="Bank Transfer">بینک ٹرانسفر</option>
+                  <option value="Online">آن لائن</option>
                 </select>
               </div>
             </div>
@@ -3057,7 +3055,7 @@
 
             <div class="btn-container" style="margin-top:24px;">
               <button onclick="processFeePayment()" class="fee-process-btn">
-                🖨️ فیس محفوظ کریں اور رسید پرنٹ کریں
+                فیس محفوظ کریں اور رسید پرنٹ کریں
               </button>
             </div>
           </div>
@@ -3066,25 +3064,25 @@
 
       <!-- ===== تمام ادائیگیاں / رپورٹ ===== -->
       <div id="feeAnalyticsContainer" style="display:none;">
-        <h2>📊 فیس رپورٹ اور تمام ادائیگیاں</h2>
+        <h2>فیس رپورٹ اور تمام ادائیگیاں</h2>
 
         <!-- summary کارڈز -->
         <div class="fee-summary-cards">
           <div class="fee-summary-card green-card">
-            <div class="fee-summary-icon">💰</div>
+            <div class="fee-summary-icon"></div>
             <div class="fee-summary-label">کل وصولی</div>
             <span class="fee-summary-rs">Rs.</span>
             <div class="fee-summary-amount" id="totalCollectionDisplay">0</div>
             <div class="fee-summary-sub">Total Collection</div>
-            <div class="fee-summary-badge">✅ Collected</div>
+            <div class="fee-summary-badge">Collected</div>
           </div>
           <div class="fee-summary-card red-card">
-            <div class="fee-summary-icon">⏳</div>
+            <div class="fee-summary-icon"></div>
             <div class="fee-summary-label">کل بقایا جات</div>
             <span class="fee-summary-rs">Rs.</span>
             <div class="fee-summary-amount" id="totalArrearsDisplay">0</div>
             <div class="fee-summary-sub">Total Arrears</div>
-            <div class="fee-summary-badge">⚠️ Pending</div>
+            <div class="fee-summary-badge">Pending</div>
           </div>
         </div>
 
@@ -3106,12 +3104,12 @@
       <div class="att-toggle-wrap">
         <button class="att-toggle-btn active" id="attToggleStudent"
           onclick="pickAttendanceType('student', this)">
-          <span class="att-toggle-icon">🎓</span>
+          <span class="att-toggle-icon"></span>
           <span class="att-toggle-label">طلباء کی حاضری</span>
         </button>
         <button class="att-toggle-btn" id="attToggleStaff"
           onclick="pickAttendanceType('staff', this)">
-          <span class="att-toggle-icon">👔</span>
+          <span class="att-toggle-icon"></span>
           <span class="att-toggle-label">عملے کی حاضری</span>
         </button>
       </div>
@@ -3120,10 +3118,10 @@
       <div class="att-history-panel">
         <div class="att-history-btns">
           <button class="att-view-btn" onclick="showAttendanceHistory()">
-            📋 حاضری ریکارڈ دیکھیں
+            حاضری ریکارڈ دیکھیں
           </button>
           <button class="att-clear-btn" onclick="clearAttendanceHistoryView()">
-            🗑️ پینل صاف کریں
+            پینل صاف کریں
           </button>
         </div>
         <div id="attendanceHistoryArea" style="margin-top:14px;"></div>
@@ -3131,7 +3129,7 @@
 
       <!-- Student Attendance Container -->
       <div id="studentAttendanceContainer">
-        <h2>🎓 طلباء کی حاضری</h2>
+        <h2>طلباء کی حاضری</h2>
         <div class="grid-row" style="margin-bottom:20px;">
           <div>
             <label>تاریخ</label>
@@ -3148,14 +3146,14 @@
         <div class="btn-container" style="display:none; margin-top:20px;" id="saveStudentAttBtnContainer">
           <button onclick="saveStudentAttendance()"
             style="background:linear-gradient(135deg,#1b5e20,#2e7d32); font-size:1.1rem; padding:13px 44px; border-radius:10px; box-shadow:0 4px 14px rgba(27,94,32,0.28);">
-            ✅ حاضری محفوظ کریں
+            حاضری محفوظ کریں
           </button>
         </div>
       </div>
 
       <!-- Staff Attendance Container -->
       <div id="staffAttendanceContainer" style="display:none;">
-        <h2>👔 عملے کی حاضری</h2>
+        <h2>عملے کی حاضری</h2>
         <div class="grid-row" style="margin-bottom:20px;">
           <div>
             <label>تاریخ</label>
@@ -3166,11 +3164,11 @@
             <div class="session-toggle-wrap">
               <button class="session-btn checkin-btn active" id="sessionCheckinBtn"
                 onclick="pickSession('checkin', this)">
-                🟢 چیک اِن
+                چیک اِن
               </button>
               <button class="session-btn checkout-btn" id="sessionCheckoutBtn"
                 onclick="pickSession('checkout', this)">
-                🔵 چیک آؤٹ
+                چیک آؤٹ
               </button>
             </div>
             <select id="staffAttendanceSession" onchange="loadStaffAttendance()" style="display:none;">
@@ -3188,11 +3186,11 @@
         <div class="btn-container" style="display:none; margin-top:20px; gap:14px; justify-content:center; display:none;" id="saveStaffAttBtnContainer">
           <button onclick="saveStaffAttendanceCheckIn()" id="saveStaffCheckInBtn"
             class="checkin-save-btn">
-            🟢 چیک اِن محفوظ کریں
+            چیک اِن محفوظ کریں
           </button>
           <button onclick="saveStaffAttendanceCheckOut()" id="saveStaffCheckOutBtn"
             class="checkout-save-btn">
-            🔵 چیک آؤٹ محفوظ کریں
+            چیک آؤٹ محفوظ کریں
           </button>
         </div>
       </div>
@@ -3206,7 +3204,7 @@
 
     <!-- ہیڈر -->
     <div class="receipt-header">
-      <div class="receipt-logo">🕌</div>
+      <div class="receipt-logo"></div>
       <h1 class="receipt-org">Iqra Rauzatul Atfal Trust</h1>
       <p class="receipt-branch">Branch: Syedna Hanzala R.A — Bedian, Lahore</p>
       <p class="receipt-branch">Tel: 03349925208</p>
@@ -3235,7 +3233,7 @@
 
     <!-- طالب علم -->
     <div class="receipt-student-box">
-      <div class="receipt-section-title">👤 Student Information</div>
+      <div class="receipt-section-title">Student Information</div>
       <div class="receipt-student-row">
         <div>
           <span class="receipt-field-label">Name</span>
@@ -3300,7 +3298,7 @@
     <!-- دستخط -->
     <div class="receipt-footer">
       <div class="receipt-note">
-        ⚠️ Please save this voucher for your records.
+        Please save this voucher for your records.
       </div>
       <div class="receipt-sig">
         <div class="receipt-sig-line"></div>
@@ -4572,10 +4570,10 @@ function renderStaffList() {
 
           <!-- اوپر دائیں — ترمیم / حذف -->
           <div class="staff-card-actions">
-            <button class="staff-action-btn staff-edit-btn"
-              onclick="editStaffProfile('${code}')" title="ترمیم">✏️</button>
-            <button class="staff-action-btn staff-delete-btn"
-              onclick="deleteStaffProfile('${code}')" title="حذف">🗑️</button>
+            <button class="staff-action-btn staff-edit-btn" style="width:auto; padding:0 8px;"
+              onclick="editStaffProfile('${code}')" title="ترمیم">ترمیم</button>
+            <button class="staff-action-btn staff-delete-btn" style="width:auto; padding:0 8px;"
+              onclick="deleteStaffProfile('${code}')" title="حذف">حذف</button>
           </div>
 
           <!-- اوتار + نام -->
@@ -4584,84 +4582,84 @@ function renderStaffList() {
             <div>
               <div class="staff-card-name">${s.name || '-'}</div>
               <span class="staff-card-id">ID: ${code}</span>
-              <div class="staff-card-father">👤 والد: ${s.fatherName || '-'}</div>
+              <div class="staff-card-father">والد: ${s.fatherName || '-'}</div>
             </div>
           </div>
 
           <!-- تفصیلات گرڈ -->
           <div class="staff-details-grid">
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">🏫</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">تفویض کردہ کلاس</span>
                 <span class="staff-detail-val">${s.assignedClassName || 'تفویض نہیں'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">📞</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">فون نمبر</span>
                 <span class="staff-detail-val">${s.phone || '-'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">💬</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">واٹس ایپ</span>
                 <span class="staff-detail-val">${s.whatsapp || '-'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">🪪</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">شناختی کارڈ</span>
                 <span class="staff-detail-val">${s.cnic || '-'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">🎓</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">تعلیمی قابلیت</span>
                 <span class="staff-detail-val">${s.qualification || '-'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">📅</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">تقرری</span>
                 <span class="staff-detail-val">${s.joiningDate || '-'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">🕐</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">ڈیوٹی اوقات</span>
                 <span class="staff-detail-val">${s.shiftStart || '06:50'} — ${s.shiftEnd || '14:45'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">🏠</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">رہائش</span>
                 <span class="staff-detail-val">${s.residenceStatus || '-'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">📍</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">پتہ</span>
                 <span class="staff-detail-val">${s.address || '-'}</span>
               </div>
             </div>
             <div class="staff-detail-item">
-              <span class="staff-detail-icon">💼</span>
+              <span class="staff-detail-icon"></span>
               <div>
                 <span class="staff-detail-label">سابقہ تجربہ</span>
                 <span class="staff-detail-val">${s.experience || '-'}</span>
               </div>
             </div>
           </div>
-          ${s.notes ? `<div class="staff-card-notes">📝 ${s.notes}</div>` : ''}
+          ${s.notes ? `<div class="staff-card-notes">${s.notes}</div>` : ''}
         </div>
       `;
     }).join('');
@@ -4732,28 +4730,28 @@ function populateDashboard() {
     // Create dashboard HTML
     let dashboardHTML = `
         <div class="dashboard-card success">
-            <div class="dashboard-icon">👨‍🎓</div>
+            <div class="dashboard-icon"></div>
             <div class="card-label">فی الوقت طلباء</div>
             <div class="card-number">${totalStudents}</div>
             <div class="card-description">فعال اور داخل شدہ</div>
         </div>
         
         <div class="dashboard-card warning">
-            <div class="dashboard-icon">🎓</div>
+            <div class="dashboard-icon"></div>
             <div class="card-label">تکمیل شدہ</div>
             <div class="card-number">${completedStudents}</div>
             <div class="card-description">حافظ / مکمل شدہ طلباء</div>
         </div>
         
         <div class="dashboard-card danger">
-            <div class="dashboard-icon">📋</div>
+            <div class="dashboard-icon"></div>
             <div class="card-label">خارج شدہ</div>
             <div class="card-number">${withdrawnStudents}</div>
             <div class="card-description">نکالے گئے طلباء</div>
         </div>
         
         <div class="dashboard-card info">
-            <div class="dashboard-icon">👨‍🏫</div>
+            <div class="dashboard-icon"></div>
             <div class="card-label">عملہ</div>
             <div class="card-number">${staffCount}</div>
             <div class="card-description">اساتذہ / درسگاہ</div>
@@ -5930,7 +5928,7 @@ function wizardBuildReview() {
      </div>`).join('');
 
   const html = `
-    <div class="review-section-title">📋 طالب علم کی معلومات</div>
+    <div class="review-section-title">طالب علم کی معلومات</div>
     ${rows([
       ['رجسٹریشن نمبر', get('admRegNo')],
       ['نام', get('admName')],
@@ -5941,7 +5939,7 @@ function wizardBuildReview() {
       ['ب فارم', get('admBForm')],
       ['پتہ', get('admAddress')],
     ])}
-    <div class="review-section-title">👨 والد کی معلومات</div>
+    <div class="review-section-title">والد کی معلومات</div>
     ${rows([
       ['نام', get('fatherName')],
       ['شناختی کارڈ', get('fatherCnic')],
@@ -5950,7 +5948,7 @@ function wizardBuildReview() {
       ['آمدنی', get('fatherIncome')],
       ['سرپرست', guardianEl?.value === 'yes' ? 'ہاں' : 'نہیں'],
     ])}
-    <div class="review-section-title">👩 والدہ کی معلومات</div>
+    <div class="review-section-title">والدہ کی معلومات</div>
     ${rows([
       ['نام', get('motherName')],
       ['شناختی کارڈ', get('motherCnic')],
@@ -6052,12 +6050,12 @@ function toggleStaffForm() {
     panel.classList.remove('slide-down');
     void panel.offsetWidth;
     panel.classList.add('slide-down');
-    if (icon) icon.textContent = '✕';
+    if (icon) icon.textContent = '';
     if (text) text.textContent = 'فارم بند کریں';
     panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   } else {
     panel.style.display = 'none';
-    if (icon) icon.textContent = '➕';
+    if (icon) icon.textContent = '';
     if (text) text.textContent = 'نیا استاد شامل کریں';
   }
 }
@@ -6138,14 +6136,14 @@ function pickFeeView(view, btn) {
 
 // مضامین کی تعریف — max نمبر تصویر کے مطابق
 const ME_COLS = [
-  { key:'attendance', label:'حاضری',   max:10,  icon:'✅' },
-  { key:'manzil',     label:'منزل',    max:60,  icon:'📖' },
-  { key:'tajweed',    label:'تجوید',   max:10,  icon:'🔊' },
-  { key:'islamiat',   label:'اسلامیات',max:10,  icon:'☪️'  },
-  { key:'itmaad',     label:'اعتماد',  max:10,  icon:'🎤' },
+  { key:'attendance', label:'حاضری',   max:10,  icon:'' },
+  { key:'manzil',     label:'منزل',    max:60,  icon:'' },
+  { key:'tajweed',    label:'تجوید',   max:10,  icon:'' },
+  { key:'islamiat',   label:'اسلامیات',max:10,  icon:''  },
+  { key:'itmaad',     label:'اعتماد',  max:10,  icon:'' },
   // خواندگی — دو ذیلی فیلڈز
-  { key:'para',       label:'پارہ نمبر',   max:null, icon:'📄', group:'literacy', sub:true },
-  { key:'tarkoo',     label:'ترکو نمبر',   max:null, icon:'📝', group:'literacy', sub:true },
+  { key:'para',       label:'پارہ نمبر',   max:null, icon:'', group:'literacy', sub:true },
+  { key:'tarkoo',     label:'ترکو نمبر',   max:null, icon:'', group:'literacy', sub:true },
 ];
 
 // کل ممکنہ نمبر (صرف scored فیلڈز)
@@ -6207,12 +6205,12 @@ function meLoadStudents() {
       <tr>
         <th rowspan="2" style="min-width:48px;">نمبر</th>
         <th rowspan="2" style="min-width:160px; text-align:right; padding-right:12px;">طالب علم</th>
-        ${nonSub.map(c=>`<th rowspan="2">${c.icon}<br>${c.label}<br><span class="me-max-label">/ ${c.max}</span></th>`).join('')}
-        ${hasLit ? `<th colspan="2" class="me-literacy-group">📚 خواندگی</th>` : ''}
+        ${nonSub.map(c=>`<th rowspan="2">${c.icon ? c.icon + '<br>' : ''}${c.label}<br><span class="me-max-label">/ ${c.max}</span></th>`).join('')}
+        ${hasLit ? `<th colspan="2" class="me-literacy-group">خواندگی</th>` : ''}
         <th rowspan="2" style="min-width:80px;">کل<br><span class="me-max-label">/ ${ME_MAX_TOTAL}</span></th>
       </tr>
       <tr class="me-subhead">
-        ${ME_COLS.filter(c=>c.sub).map(c=>`<th class="me-literacy-sub">${c.icon} ${c.label}</th>`).join('')}
+        ${ME_COLS.filter(c=>c.sub).map(c=>`<th class="me-literacy-sub">${c.icon ? c.icon + ' ' : ''}${c.label}</th>`).join('')}
       </tr>
     </thead>`;
 
@@ -6374,13 +6372,13 @@ function meRenderHistory() {
       <div class="me-history-card">
         <div class="me-history-header">
           <div>
-            <span class="me-history-title">🏫 ${exam.className}</span>
-            <span class="me-history-badge" style="margin-right:8px;">📅 ${exam.month} ${exam.year}</span>
+            <span class="me-history-title">${exam.className}</span>
+            <span class="me-history-badge" style="margin-right:8px;">${exam.month} ${exam.year}</span>
           </div>
           <div style="display:flex;gap:8px;align-items:center;">
             <span class="me-chip me-chip-green">اوسط: ${avg.toFixed(1)}% ${gd.g}</span>
             <span class="me-chip me-chip-blue">طلباء: ${exam.students.length}</span>
-            <button class="me-del-btn" onclick="meDeleteExam(${ei})">🗑️ حذف</button>
+            <button class="me-del-btn" onclick="meDeleteExam(${ei})">حذف</button>
           </div>
         </div>
         <div class="me-table-wrap" style="margin-bottom:0;">
